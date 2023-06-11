@@ -1,0 +1,27 @@
+{
+    "name": "rubik-cube",
+    "version": "1.0.0",
+    "description": "The Rubik's Cube game made with Threejs supports switching Rubik's order.",
+    "main": "index.js",
+    "scripts": {
+        "tsc:watch": "tsc --watch",
+        "start": "concurrently --kill-others --names tsc,web-dev-server \"npm run tsc:watch\" \"web-dev-server --config web-dev-server.config.js\"",
+        "build": "rimraf dist && tsc && rollup -c rollup.config.js"
+    },
+    "keywords": ["rubik-cube", "rubik", "threejs", "webgl", "game"],
+    "author": "Wang Pengfei <pengfeixc@sina.com> (https://pengfeixc.com)",
+    "license": "MIT",
+    "devDependencies": {
+        "@open-wc/building-rollup": "^2.0.1",
+        "@types/three": "^0.134.0",
+        "@web/dev-server": "^0.1.28",
+        "concurrently": "^6.4.0",
+        "deepmerge": "^4.2.2",
+        "rimraf": "^3.0.2",
+        "rollup": "^2.60.2",
+        "typescript": "^4.5.2"
+    },
+    "dependencies": {
+        "three": "^0.135.0"
+    }
+}
